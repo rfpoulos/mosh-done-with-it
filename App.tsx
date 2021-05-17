@@ -15,7 +15,9 @@ export default function App() {
         flex: 1,
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        alignContent: "center",
+        flexWrap: "wrap",
       }}>
         <View
           style={{
@@ -30,7 +32,7 @@ export default function App() {
           style={{
             backgroundColor: 'gold',
             width: 100,
-            height: 200,
+            height: 100,
           }}
         >
         </View>
@@ -42,6 +44,27 @@ export default function App() {
           }}
         >
         </View>
+        <View
+          style={{
+            backgroundColor: 'grey',
+            width: 100,
+            height: 100,
+          }}
+        ></View>
+        <View
+          style={{
+            backgroundColor: 'green',
+            width: 100,
+            height: 100,
+          }}
+        ></View>
+        <View
+          style={{
+            backgroundColor: 'green-yellow',
+            width: 100,
+            height: 100,
+          }}
+        ></View>
       </View>
     </SafeAreaView>
   );
