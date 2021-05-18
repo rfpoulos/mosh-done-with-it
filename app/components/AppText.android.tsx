@@ -2,7 +2,6 @@ import React from 'react';
 import { 
     Text, 
     StyleSheet,
-    Platform,
 } from 'react-native'
 
 function AppText({ children }: { children: string}) {
@@ -17,16 +16,8 @@ function AppText({ children }: { children: string}) {
 
 const styles = StyleSheet.create({
     text: {
-        ...Platform.select({
-            ios: {
-                fontSize: 20,
-                fontFamily: "Avenir",
-            },
-            android: {
-                fontSize: 18,
-                fontFamily: "Roboto"
-            }
-        }),
+        fontSize: 18,
+        fontFamily: "Roboto"
     }
 });
 
