@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { 
     Text, 
     StyleSheet,
     Platform,
+    TextStyle,
 } from 'react-native'
 
-function AppText({ children }: { children: string}) {
+interface Props {
+    textStyle?: TextStyle
+}
+
+function AppText({ children, textStyle }: PropsWithChildren<Props>) {
     return (
         <Text
-            style={styles.text}
+            style={[styles.text, textStyle]}
         >
             {children}
         </Text>
