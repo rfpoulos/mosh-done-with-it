@@ -3,6 +3,7 @@ import {
     Image,
     ImageSourcePropType,
     StyleSheet,
+    TouchableOpacity,
     View,
 } from 'react-native';
 import colors from '../config/colors';
@@ -19,32 +20,35 @@ const ListItem: React.FC<Props> = ({
     subTitle,
 }) => {
     return (
-        <View
-            style={styles.container}
-        >
-            <Image 
-                style={styles.image}
-                source={image}
-            />
-            <View>
-                <AppText
-                    textStyle={styles.title}
-                >
-                    {title}
-                </AppText>
-                <AppText
-                    textStyle={styles.subTitle}
-                >
-                    {subTitle}
-                </AppText>
+        <TouchableOpacity>
+            <View
+                style={styles.container}
+            >
+                <Image 
+                    style={styles.image}
+                    source={image}
+                />
+                <View>
+                    <AppText
+                        textStyle={styles.title}
+                    >
+                        {title}
+                    </AppText>
+                    <AppText
+                        textStyle={styles.subTitle}
+                    >
+                        {subTitle}
+                    </AppText>
+                </View>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 };
 
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
+        padding: 15,
     },
     image: {
         width: 70,
